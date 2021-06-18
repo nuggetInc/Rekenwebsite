@@ -34,13 +34,15 @@ $pagina = isset($_GET["pagina"]) ? $_GET["pagina"] : null;
     <main class="page-content">
         <?php
 
-        // switch ($pagina) {
-        //     case "login":
-        //         require("./login.php");
-        //         break;
-        //     default:"); // On first load, when no page is selected.
-        // }
-        //         require("./login.php
+        switch ($pagina) {
+            case "login":
+                require("./login.php");
+                break;
+            default:
+                require("./login.php"); // On first load, when no page is selected.
+                break;
+        }
+
 
         ?>
     </main>
