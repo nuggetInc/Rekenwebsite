@@ -1,0 +1,56 @@
+.page-header {
+    position: sticky;
+    top: 0;
+
+    padding: 0 2rem;
+    width: 100%;
+    height: var(--header-height);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+
+    box-sizing: border-box;
+    background: white;
+    box-shadow: 0 0 10px 0 white;
+}
+
+.page-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    
+    list-style: none;
+}
+
+.nav-item {
+    font-size: large;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-item.active {
+    font-weight: bolder;
+}
+
+.page-name {
+    margin: 0;
+
+    font-size: x-large;
+}
+
+.page-title {
+    margin: 0;
+
+    font-size: xx-large;
+    color: black;
+    text-decoration: none;
+}
