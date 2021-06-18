@@ -12,7 +12,7 @@ if (isset($_POST["password"], $_POST["username"])) {
 
     if ($sth->rowCount() != 0) // if user and password both exist;
     {
-        $_SESSION["user_salt"] = $sth->fetch()[0];
+        $_SESSION["user_id"] = $sth->fetch()[0];
     }
     // header("Location: ./");
 }
