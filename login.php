@@ -2,6 +2,7 @@
 
 $pdo = new PDO("mysql:host=localhost;dbname=Rekenwebsite", "root", "");
 
+// if user and password are both set;
 if (isset($_POST["password"], $_POST["username"]))
 {
     $salt = hash('sha512', $_POST["password"]);
