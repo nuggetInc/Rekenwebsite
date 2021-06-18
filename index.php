@@ -1,5 +1,7 @@
 <?php
 
+require("./classes/Database.php");
+
 $pagina = isset($_GET["pagina"]) ? $_GET["pagina"] : null;
 
 ?>
@@ -42,7 +44,6 @@ $pagina = isset($_GET["pagina"]) ? $_GET["pagina"] : null;
                 require("./login.php"); // On first load, when no page is selected.
                 break;
         }
-
 
         ?>
     </main>
