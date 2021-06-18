@@ -14,7 +14,7 @@ if (isset($_POST["password"], $_POST["username"])) {
     {
         $_SESSION["user_id"] = $sth->fetch()[0];
     }
-    // header("Location: ./");
+    header("Location: ./");
 }
 
 ?>
