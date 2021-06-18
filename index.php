@@ -1,6 +1,7 @@
 <?php
 
 require("./classes/Database.php");
+session_start();
 
 $pagina = isset($_GET["pagina"]) ? $_GET["pagina"] : null;
 
