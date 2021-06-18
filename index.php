@@ -5,6 +5,12 @@ session_start();
 
 $pagina = isset($_GET["pagina"]) ? $_GET["pagina"] : null;
 
+$parameters = array(":id" => $_SESSION["user_id"]);
+$sth = Database::prepare("SELECT naam FROM gebruiker WHERE id = :id");
+$sth->execute($parameters);
+
+$loggedInUser = $sth->fetch();
+
 ?>
 <!DOCTYPE html>
 <html lang="nl">
@@ -28,7 +34,7 @@ $pagina = isset($_GET["pagina"]) ? $_GET["pagina"] : null;
         </nav>
         <h2 class="page-name">
             <!-- name of the logged in user -->
-            Nugget
+            <?= $loggedInUser["naam"] ?>
         </h2>
         <h1>
             <a class="page-title" href="./">REKENWEBSITE</a>
