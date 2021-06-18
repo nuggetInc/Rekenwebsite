@@ -13,8 +13,8 @@
     align-items: center;
 
     box-sizing: border-box;
-    background: white;
-    box-shadow: 0 0 10px 0 white;
+    background: var(--foreground-color);
+    box-shadow: 0 0 10px 0 var(--shadow-color);
 }
 
 .page-nav {
@@ -33,7 +33,7 @@
 
 .nav-item {
     font-size: large;
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -45,12 +45,13 @@
     margin: 0;
 
     font-size: x-large;
+    color: var(--text-color);
 }
 
 .page-title {
     margin: 0;
 
     font-size: xx-large;
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
 }

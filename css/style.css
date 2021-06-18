@@ -1,11 +1,15 @@
 :root {
     --header-height: 5rem;
+
+    --background-color: #f7f7f7;
+    --foreground-color: white;
+    --shadow-color: #d7d7d7;
+    --text-color: black;
 }
 
 body {
     margin: 0;
     padding: 0;
 
-    background-color: #f7f7f7;
-    /* background-image: url("https://images.unsplash.com/photo-1544306094-e2dcf9479da3"); */
+    background-color: var(--background-color);
 }
