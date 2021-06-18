@@ -1,0 +1,11 @@
+:root {
+    --header-height: 5rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #f7f7f7;
+    /* background-image: url("https://images.unsplash.com/photo-1544306094-e2dcf9479da3"); */
+}
