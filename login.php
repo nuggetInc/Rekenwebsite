@@ -6,16 +6,13 @@ if (isset($_POST["password"], $_POST["username"])) {
 
     $password =  hash('sha512',  $_POST["password"] . $salt);
 
-
     $parameters = array(':naam' => $_POST["username"], ':wachtwoord' => $password);
     $sth = Database::prepare("SELECT id FROM gebruiker WHERE naam = :naam AND wachtwoord = :wachtwoord");
     $sth->execute($parameters);
 
-
     if ($sth->rowCount() != 0) // if user and password both exist;
     {
-        $_SESSION["user_salt"] = $salt;
-        echo "BOB";
+        $_SESSION["user_salt"] = $sth->fetch()[0];
     }
     // header("Location: ./");
 }
