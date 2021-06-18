@@ -36,10 +36,7 @@ if ($loggedIn) {
                 <li><a class="nav-item" href="">home</a></li>
             </ul>
         </nav>
-        <h2 class="page-name">
-            <!-- name of the logged in user -->
-            <?= $loggedIn ? $loggedInUser["naam"] : null ?>
-        </h2>
+        <?= $loggedIn ?  "<h2 class='page-name'>{$loggedInUser['naam']}</h2>" : null ?>
         <h1>
             <a class="page-title" href="./">REKENWEBSITE</a>
         </h1>
