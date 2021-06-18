@@ -1,8 +1,7 @@
-<?php session_start();
+<?php
 
 // if user and password are both set;
-if (isset($_POST["password"], $_POST["username"]))
-{
+if (isset($_POST["password"], $_POST["username"])) {
     $salt = hash('sha512', $_POST["password"]);
 
     $password =  hash('sha512',  $_POST["password"] . $salt);
