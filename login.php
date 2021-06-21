@@ -19,10 +19,16 @@ if (isset($_POST["password"], $_POST["username"])) {
 
 ?>
 <div class="stylized">
-    <form action="" method="POST">
-        <input type="text" placeholder="Naam" name="username" required>
-        <input type="password" placeholder="Wachtwoord" name="password" required>
-        <input type="submit">
-    </form>
+    <div class="title-wraper">
+        <h2>Log in</h2>
+    </div>
+    <div class="form-wraper">
+        <form action="" method="POST">
+            <input class="form-input" type="text" placeholder="Naam" name="username" required>
+            <input class="form-input" type="password" placeholder="Wachtwoord" name="password" required>
+            <input class="form-submit" value="Log in" type="submit">
+        </form>
+    </div>
 </div>
+    
 
