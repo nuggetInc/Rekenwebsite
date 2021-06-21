@@ -5,11 +5,15 @@ session_start();
 
 $pagina = isset($_GET["pagina"]) ? $_GET["pagina"] : null;
 
-$parameters = array(":id" => $_SESSION["user_id"]);
-$sth = Database::prepare("SELECT naam FROM gebruiker WHERE id = :id");
-$sth->execute($parameters);
+$loggedIn = isset($_SESSION["user_id"]);
 
-$loggedInUser = $sth->fetch();
+if ($loggedIn) {
+    $parameters = array(":id" => $_SESSION["user_id"]);
+    $sth = Database::prepare("SELECT naam FROM gebruiker WHERE id = :id");
+    $sth->execute($parameters);
+
+    $loggedInUser = $sth->fetch();
+}
 
 ?>
 <!DOCTYPE html>
@@ -32,10 +36,7 @@ $loggedInUser = $sth->fetch();
                 <li><a class="nav-item" href="">home</a></li>
             </ul>
         </nav>
-        <h2 class="page-name">
-            <!-- name of the logged in user -->
-            <?= $loggedInUser["naam"] ?>
-        </h2>
+        <?= $loggedIn ?  "<h2 class='page-name'>{$loggedInUser['naam']}</h2>" : null ?>
         <h1>
             <a class="page-title" href="./">REKENWEBSITE</a>
         </h1>
