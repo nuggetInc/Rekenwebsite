@@ -52,8 +52,26 @@ if ($loggedIn) {
                 break;
             case "logout":
                 require("./logout.php");
+                break;
+            case "home_leerling":
+                require("./home_leerling.php");
+                break;
+            case "home_docent":
+                require("./home_docent.php");
+                break;
             default:
-                require("./login.php"); // On first load, when no page is selected.
+                if ($loggedIn) {
+                    switch ($loggedInUser["type"]) {
+                        case 0:
+                            header("Location: ./?pagina=home_leerling");
+                            break;
+                        case 1:
+                            header("Location: ./?pagina=home_docent");
+                            break;
+                    }
+                } else {
+                    header("Location: ./?pagina=login"); // On first load, when no page is selected.
+                }
                 break;
         }
 
