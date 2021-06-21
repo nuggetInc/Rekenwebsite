@@ -53,6 +53,12 @@ if ($loggedIn) {
             case "logout":
                 require("./logout.php");
                 break;
+            case "home_leerling":
+                require("./home_leerling.php");
+                break;
+            case "home_docent":
+                require("./home_docent.php");
+                break;
             default:
                 if ($loggedIn) {
                     switch ($loggedInUser["type"]) {
