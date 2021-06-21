@@ -14,12 +14,15 @@ if (isset($_POST["password"], $_POST["username"])) {
     {
         $_SESSION["user_id"] = $sth->fetch()[0];
     }
-    // header("Location: ./");
+    header("Location: ./");
 }
 
 ?>
-<form action="" method="POST">
-    <input type="text" placeholder="Naam" name="username" required>
-    <input type="password" placeholder="Wachtwoord" name="password" required>
-    <input type="submit">
-</form>
+<div class="stylized">
+    <form action="" method="POST">
+        <input type="text" placeholder="Naam" name="username" required>
+        <input type="password" placeholder="Wachtwoord" name="password" required>
+        <input type="submit">
+    </form>
+</div>
+
