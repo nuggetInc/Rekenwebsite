@@ -54,7 +54,7 @@ if ($loggedIn) {
                 require("./logout.php");
                 break;
             default:
-                if (!$loggedIn) {
+                if ($loggedIn) {
                     switch ($loggedInUser["type"]) {
                         case 0:
                             header("Location: ./?pagina=home_leerling");
